@@ -6,7 +6,8 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(_20_ValidParentheses.IsValid("]"));
+
+            Console.WriteLine(_67_AddBinary.AddBinary("10","11"));
 
             Console.ReadLine();
         }
