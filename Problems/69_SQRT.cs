@@ -15,21 +15,12 @@ namespace Solutions.Problems
     {
         public static int MySqrt(int x)
         {
-            long squared = 4, root=2, previous = 1;
-            int right = 2;
-            int left = 1;
-
-            if (x == 0) return 0;
-            if (x < 4) return 1;
-            else
+            long a = 0;
             while (true)
             {
-                if (squared > x) return (int)previous;
-                else
-                if(squared == x) return (int)root;
-                squared += ++right + ++left;
-                previous = root;
-                root++;
+                if (a * a > x) return (int)--a;
+                if (a * a == x) return (int)a;
+                a++;
             }
         }
     }
