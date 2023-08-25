@@ -6,9 +6,7 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(_69_SQRT.MySqrt(2147483647));
-
+            Console.WriteLine(_70_ClimbingStairs.ClimbStairs(6));
             Console.ReadLine();
         }
     }
