@@ -7,7 +7,7 @@ namespace Solutions
         static void Main(string[] args)
         {
 
-            Console.WriteLine(_67_AddBinary.AddBinary("10","11"));
+            Console.WriteLine(_69_SQRT.MySqrt(2147483647));
 
             Console.ReadLine();
         }
