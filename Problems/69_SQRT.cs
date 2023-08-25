@@ -15,13 +15,24 @@ namespace Solutions.Problems
     {
         public static int MySqrt(int x)
         {
-            long a = 0;
-            while (true)
+            if (x < 2) return x;
+
+            int left = 1;
+            int right = x;
+
+            while (left <= right)
             {
-                if (a * a > x) return (int)--a;
-                if (a * a == x) return (int)a;
-                a++;
+                int mid = left + (right - left) / 2;
+
+                if (mid == x / mid)
+                    return mid;
+                else if (mid < x / mid)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
             }
+
+            return right;
         }
     }
 }
