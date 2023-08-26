@@ -26,7 +26,7 @@ namespace Solutions.Problems
             while (true)
             {
                 if (index >= nums.Length || index==0) return index;
-                if(nums[index] >= target && nums[index-1]<=target) return index;
+                if(nums[index] >= target && nums[index-1]<target) return index;
                 if (nums[index] > target)
                 {
                     index -= index>0? inc == 0 ? 1 : inc:0;
