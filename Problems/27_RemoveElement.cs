@@ -21,28 +21,12 @@ namespace Solutions.Problems
         public static int RemoveElement(int[] nums, int val)
         {
             int count = 0;
-            int firstIndex=0,lastIndex = nums.Length - 1;
-
-            while(firstIndex <= lastIndex)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if(nums[firstIndex] == val)
+                if (nums[i] != val)
                 {
-                    if (nums[lastIndex] != val)
-                    {
-                        count++;
-                        int temp = nums[firstIndex];
-                        nums[firstIndex++] = nums[lastIndex];
-                        nums[lastIndex--] = temp;
-                    }
-                    else
-                    {
-                        lastIndex--;
-                    }
-                }
-                else
-                {
+                    nums[count] = nums[i];
                     count++;
-                    firstIndex++;
                 }
             }
             return count;
