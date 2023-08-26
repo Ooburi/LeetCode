@@ -6,7 +6,9 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(_70_ClimbingStairs.ClimbStairs(6));
+            int[] ar = new[] { 3,2,2,3 };
+
+            Console.WriteLine(_27_RemoveElement.RemoveElement(ar,3));
             Console.ReadLine();
         }
     }
