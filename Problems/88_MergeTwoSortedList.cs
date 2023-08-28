@@ -20,32 +20,9 @@ namespace Solutions.Problems
     {
         public static void Merge(int[] nums1, int m, int[] nums2, int n)
         {
-            int index = 0;
-            for (int i = m; i < m + n; i++)
-            {
-                nums1[i] = nums2[index++];
-            }
-
-            for(int i =0; i<m; i++)
-            {
-                index = i;
-                if (n>0 && nums1[i] >= nums2[0])
-                {
-                    break;
-                }
-            }
-
-            for (int j = index>0?index:1; j < n+m; j++)
-            {
-                index = nums1[j];
-                int i = j - 1;
-                while (i >= 0 && index < nums1[i])
-                {
-                    nums1[i + 1] = nums1[i];
-                    i--;
-                }
-                nums1[i + 1] = index;
-            }
+            var i = --m + n--;
+            while (n >= 0)
+                nums1[i--] = m >= 0 && nums1[m] > nums2[n] ? nums1[m--] : nums2[n--];
         }
     }
 }
