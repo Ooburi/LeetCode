@@ -12,7 +12,36 @@ namespace Solutions.Problems
     {
         public static bool IsSymmetric(TreeNode root)
         {
-            if(root.left==null && root.right!=null || root.left!=null && root.left==null || root.left?.val != root.right?.val)
+            //if (root == null)
+            //{
+            //    return true;
+            //}
+
+            //var stack = new Stack<(TreeNode, TreeNode)>();
+            //stack.Push((root.left, root.right));
+
+            //while (stack.Any())
+            //{
+            //    switch (stack.Pop())
+            //    {
+            //        case (null, null):
+            //            continue;
+
+            //        case (null, _) or (_, null):
+            //            return false;
+
+            //        case (TreeNode l, TreeNode r) when l.val != r.val:
+            //            return false;
+
+            //        case (TreeNode l, TreeNode r) when l.val == r.val:
+            //            stack.Push((l.left, r.right));
+            //            stack.Push((l.right, r.left));
+            //            break;
+            //    }
+            //}
+
+            //return true;
+            if (root.left==null && root.right!=null || root.left!=null && root.left==null || root.left?.val != root.right?.val)
                 return false;
 
             if (root.left == null && root.right == null) return true;
