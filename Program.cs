@@ -17,8 +17,8 @@ namespace Solutions
                 new(2, null, new(3)),
                 new(2, new(3), null)
                 );
-
-            Console.WriteLine(_101_SymmetricTree.IsSymmetric(root2));
+            var r = _108_ArrayToBinarySearchTree.SortedArrayToBST(new int[] { 0,1,2,3,4,5 });
+            Console.WriteLine();
             Console.ReadLine();
         }
     }
