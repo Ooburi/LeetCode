@@ -6,7 +6,7 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            var temp = _118_PascalsTriangle.Generate(5);
+            var temp = _118_PascalsTriangle.GetRow(33);
             Console.WriteLine();
             Console.ReadLine();
         }
