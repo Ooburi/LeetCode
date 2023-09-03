@@ -6,10 +6,8 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            var temp = _118_PascalsTriangle.GetRow(33);
-            string s = "A man, a plan, a canal: Panama";
-            //Console.WriteLine(char.IsNumber(' '));
-            Console.WriteLine(_125_ValidPalindrome.IsPalindrome(s));
+            
+            Console.WriteLine(_62_UniquePaths.UniquePaths(3,7));
             Console.ReadLine();
         }
     }
