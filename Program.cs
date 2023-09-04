@@ -6,8 +6,7 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(_171_ExcelSheetColumnNumber.TitleToNumber("AB")); //28
-            Console.WriteLine(_171_ExcelSheetColumnNumber.TitleToNumber("FXSHRXW")); //2147483647
+            Console.WriteLine(_190_ReverseBits.reverseBits(123)); //28
             Console.ReadLine();
         }
     }
