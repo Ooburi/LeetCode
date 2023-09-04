@@ -6,7 +6,8 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(_190_ReverseBits.reverseBits(123)); //28
+            Console.WriteLine(_605_CanPlaceFlowers.CanPlaceFlowers(new int[] {1,0,0,0,1}, 2)); //false
+            Console.WriteLine(_605_CanPlaceFlowers.CanPlaceFlowers(new int[] { 1, 0, 0, 0, 0, 0, 1 }, 2)); //true
             Console.ReadLine();
         }
     }
