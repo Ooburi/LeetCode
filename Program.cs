@@ -6,8 +6,8 @@ namespace Solutions
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine(_62_UniquePaths.UniquePaths(3,7));
+            Console.WriteLine(_171_ExcelSheetColumnNumber.TitleToNumber("AB")); //28
+            Console.WriteLine(_171_ExcelSheetColumnNumber.TitleToNumber("FXSHRXW")); //2147483647
             Console.ReadLine();
         }
     }
