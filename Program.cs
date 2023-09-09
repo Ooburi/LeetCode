@@ -8,7 +8,7 @@ namespace Solutions
         static void Main(string[] args)
         {
             
-            Console.WriteLine(_202_HappyNumber.IsHappy(19));
+            Console.WriteLine(_377_CombinationSumIV.CombinationSum4(new int[] {1,2,3},4));
             Console.ReadLine();
         }
     }
