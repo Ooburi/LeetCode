@@ -8,7 +8,7 @@ namespace Solutions
         static void Main(string[] args)
         {
             
-            Console.WriteLine(_377_CombinationSumIV.CombinationSum4(new int[] {1,2,3},4));
+            Console.WriteLine(_1282_GroupThePeople.GroupThePeople(new int[] {1,4,2,3,4,2,3,1,1,1,2,3,3,2,3}));
             Console.ReadLine();
         }
     }
