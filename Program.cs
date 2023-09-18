@@ -8,13 +8,17 @@ namespace Solutions
         static void Main(string[] args)
         {
             
-            Console.WriteLine(_1584_.MinCostConnectPoints(new int[4][]
+            Console.WriteLine(_1337_.KWeakestRows(new int[4][]
             {
-                new int[] { 2,-3 },
-                new int[] { -17,-8 },
-                new int[] { 13,8 },
-                new int[] { -17,-15 }
-            }
+                new int[] { 1,1,1,0,0,0,0,0,0,0,0,0,0,0,0 }, //3
+                new int[] { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0 },//12
+                new int[] { 0,0,0,0,0,0,0,0,0,0,0 },//0
+                new int[] { 1,1,1,0,0,0 }//3
+            },0
+                ));
+            Console.WriteLine(_1337_.KWeakestRows(new int[0][]
+            {
+            }, 0
                 ));
             Console.ReadLine();
         }
