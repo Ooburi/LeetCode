@@ -32,8 +32,31 @@ namespace Solutions.Problems
                 ToArray();
 
         }
+    //    Sort(mat, k);
 
-        static int CountSoldiers(int[] row)
+
+    //}
+    //static void Sort(int[][] arr, int k)
+    //{
+    //    if (k >= arr.Length) return;
+    //    int left = 0;
+    //    int right = arr.Length;
+    //    int middle = arr[k][0];
+
+    //    while (left <= k && right > k)
+    //    {
+    //        if (arr[left][0] >= middle)
+    //        {
+    //            var temp = middle;
+    //            middle = arr[left][0];
+    //            arr[left][0] = temp;
+    //        }
+    //        else
+    //            if ()
+    //        }
+    //}
+
+    static int CountSoldiers(int[] row)
         {
             if (row[0] == 0) return 0;
 
