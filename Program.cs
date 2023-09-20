@@ -9,9 +9,9 @@ namespace Solutions
         {
             
             
-            Console.WriteLine(_287_.FindDuplicate(new int[5]
-            { 1, 2,3,4,2
-            }));
+            Console.WriteLine(_1658_.MinOperations(new int[2]
+            { 1,1
+            }, 3));
             Console.ReadLine();
         }
     }
