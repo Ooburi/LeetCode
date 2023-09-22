@@ -8,8 +8,8 @@ namespace Solutions
         static void Main(string[] args)
         {
             
-            
-            Console.WriteLine(_392_.IsSubsequence("abc","ahyrbkxzc"));
+
+            //Console.WriteLine(t1);
             Console.ReadLine();
         }
     }
