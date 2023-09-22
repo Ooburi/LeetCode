@@ -9,9 +9,7 @@ namespace Solutions
         {
             
             
-            Console.WriteLine(_1658_.MinOperations(new int[2]
-            { 1,1
-            }, 3));
+            Console.WriteLine(_392_.IsSubsequence("abc","ahyrbkxzc"));
             Console.ReadLine();
         }
     }
