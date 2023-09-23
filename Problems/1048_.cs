@@ -22,75 +22,76 @@ namespace Solutions.Problems
     {
         public static int LongestStrChain(string[] words)
         {
-            int minLength = int.MaxValue;
 
-            SortedDictionary<int, List<string>> dict = new();
-
-            foreach(var word in words)
+            Array.Sort(words, (a, b) => a.Length.CompareTo(b.Length));
+            Dictionary<string, int> dp = new Dictionary<string, int>();
+            int max_chain = 0;
+            foreach (var word in words)
             {
-                if (dict.ContainsKey(word.Length))
+                dp[word] = 1;
+                for (int i = 0; i < word.Length; i++)
                 {
-                    dict[word.Length].Add(word);
-                }
-                else
-                {
-                    dict[word.Length] = new List<string>();
-                    dict[word.Length].Add(word);
-                }
-                if(word.Length<=minLength) minLength = word.Length;
-            }
-
-            
-            int wordChain = 0;
-            while(dict.Count > 0 || dict.Count>wordChain)
-            {
-                List<int> keys = dict.Keys.ToList();
-
-                foreach (var word in dict[keys[0]])
-                {
-                    getMaxHeight(word, 1, keys);
-                }
-
-                dict.Remove(keys[0]);
-            }
-            
-
-            void getMaxHeight(string word,int index, List<int> keys)
-            {
-                if (index > wordChain) wordChain = index;
-                if (keys.Count <= index) return;
-
-                foreach (var w in dict[keys[index]])
-                {
-                    if (ContainsWord(word,w))
+                    string prev_word = word.Remove(i, 1);
+                    if (dp.ContainsKey(prev_word))
                     {
-                        
-                        getMaxHeight(w,index + 1, keys);
-                    }
-                    else continue;
-                }
-            }
-
-            bool ContainsWord(string a, string b)
-            {
-                int aPointer=0, bPointer = 0;
-                int difference = 0;
-                while(aPointer < a.Length && bPointer < b.Length)
-                {
-                    if (a[aPointer] != b[bPointer])
-                    {
-                        difference++;
-                        bPointer++;
-                    }
-                    else
-                    {
-                        bPointer++;
-                        aPointer++;
+                        dp[word] = Math.Max(dp[word], dp[prev_word] + 1);
                     }
                 }
-                return difference < 2;
+                max_chain = Math.Max(max_chain, dp[word]);
             }
-            return wordChain;
+            return max_chain;
+
+
+            //int wordChain = 0;
+            //while(dict.Count > 0 || dict.Count>wordChain)
+            //{
+            //    List<int> keys = dict.Keys.ToList();
+
+            //    foreach (var word in dict[keys[0]])
+            //    {
+            //        getMaxHeight(word, 1, keys);
+            //    }
+
+            //    dict.Remove(keys[0]);
+            //}
+
+
+            //void getMaxHeight(string word,int index, List<int> keys)
+            //{
+            //    if (index > wordChain) wordChain = index;
+            //    if (keys.Count <= index) return;
+
+            //    foreach (var w in dict[keys[index]])
+            //    {
+            //        if (ContainsWord(word,w))
+            //        {
+
+            //            getMaxHeight(w,index + 1, keys);
+            //        }
+            //        else continue;
+            //    }
+            //}
+
+            //bool ContainsWord(string a, string b)
+            //{
+            //    int aPointer=0, bPointer = 0;
+            //    int difference = 0;
+            //    while(aPointer < a.Length && bPointer < b.Length)
+            //    {
+            //        if (a[aPointer] != b[bPointer])
+            //        {
+            //            difference++;
+            //            bPointer++;
+            //        }
+            //        else
+            //        {
+            //            bPointer++;
+            //            aPointer++;
+            //        }
+            //    }
+            //    return difference < 2;
+            //}
+            //return wordChain;
         }
     }
 }
