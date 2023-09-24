@@ -34,7 +34,7 @@ namespace Solutions.Problems
                     string prev_word = word.Remove(i, 1);
                     if (dp.ContainsKey(prev_word))
                     {
-                        dp[word] = Math.Max(dp[word], dp[prev_word] + 1);
+                        dp[word] = dp[prev_word] + 1;
                     }
                 }
                 max_chain = Math.Max(max_chain, dp[word]);
