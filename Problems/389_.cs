@@ -17,36 +17,42 @@ namespace Solutions.Problems
     {
         public char FindTheDifference(string s, string t)
         {
-            Dictionary<char, int> sCountLetters = new();
-            Dictionary<char, int> tCountLetters = new();
-            foreach (char c in s)
-            {
-                if (sCountLetters.ContainsKey(c))
-                {
-                    sCountLetters[c]++;
-                }
-                else
-                {
-                    tCountLetters[c] = 1;
-                }
-            }
-            foreach (char c in t)
-            {
-                if (tCountLetters.ContainsKey(c))
-                {
-                    tCountLetters[c]++;
-                }
-                else
-                {
-                    tCountLetters[c] = 1;
-                }
-            }
-            foreach(char c in tCountLetters.Keys) {
-                if (!sCountLetters.ContainsKey(c)) return c;
-                if(sCountLetters[c] != tCountLetters[c]) return c;
-            }
+            //Dictionary<char, int> sCountLetters = new();
+            //Dictionary<char, int> tCountLetters = new();
+            //foreach (char c in s)
+            //{
+            //    if (sCountLetters.ContainsKey(c))
+            //    {
+            //        sCountLetters[c]++;
+            //    }
+            //    else
+            //    {
+            //        tCountLetters[c] = 1;
+            //    }
+            //}
+            //foreach (char c in t)
+            //{
+            //    if (tCountLetters.ContainsKey(c))
+            //    {
+            //        tCountLetters[c]++;
+            //    }
+            //    else
+            //    {
+            //        tCountLetters[c] = 1;
+            //    }
+            //}
+            //foreach(char c in tCountLetters.Keys) {
+            //    if (!sCountLetters.ContainsKey(c)) return c;
+            //    if(sCountLetters[c] != tCountLetters[c]) return c;
+            //}
 
-            return 'a';
+            //return 'a';
+            char result = (char)0;
+            foreach (char c in s + t)
+            {
+                result ^= c;
+            }
+            return result;
         }
     }
 }
