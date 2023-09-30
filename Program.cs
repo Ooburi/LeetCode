@@ -18,7 +18,7 @@ namespace Solutions
             // Console.WriteLine(_1048_.LongestStrChain(new string[] { "ksqvsyq", "ks", "kss", "czvh", "zczpzvdhx", "zczpzvh", "zczpzvhx", "zcpzvh", "zczvh", "gr", "grukmj", "ksqvsq", "gruj", "kssq", "ksqsq", "grukkmj", "grukj", "zczpzfvdhx", "gru" }));
 
 
-            Console.WriteLine(_799_ChampagneTower.ChampagneTower(25, 6, 1)); //0.18750
+            Console.WriteLine(_456_.Find132pattern(new int[] { 1, 0, 1, -4, -3 })); //0.18750
             Console.ReadLine();
         }
     }
