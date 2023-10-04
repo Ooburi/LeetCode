@@ -17,24 +17,24 @@ namespace Solutions.Problems
     //void remove(key) removes the key and its corresponding value if the map contains the mapping for the key.
     internal class _706_
     {
-        int?[] arr = new int?[1000001];
+        int[] arr = new int[1000001];
         public MyHashMap()
         {
 
         }
         public void Put(int key, int value)
         {
-            arr[key] = value;
+            arr[key] = value + 1;
         }
 
         public int Get(int key)
         {
-            return arr[key] == null ? -1 : (int)arr[key];
+            return arr[key] - 1;
         }
 
         public void Remove(int key)
         {
-            arr[key] = null;
+            arr[key] = 0;
         }
     }
 }
