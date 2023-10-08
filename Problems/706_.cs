@@ -18,7 +18,7 @@ namespace Solutions.Problems
     internal class _706_
     {
         int[] arr = new int[1000001];
-        public MyHashMap()
+        public _706_()
         {
 
         }
