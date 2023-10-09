@@ -12,7 +12,7 @@ namespace Solutions
             int i = 5;
 
             (i, j) = (j, i);
-            Console.WriteLine(i);
+            Console.WriteLine(_34_.SearchRange(new int[] { 1,4 },4));
             Console.ReadLine();
         }
     }
